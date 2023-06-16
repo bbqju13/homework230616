@@ -1,0 +1,27 @@
+package com.study.www.contorller;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.study.www.service.MemberService;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@RequestMapping("/mem/*")
+@Controller
+public class MemberContorller {
+	private static final Logger log = LoggerFactory.getLogger(MemberContorller.class);
+	private MemberService msv;
+	
+	@GetMapping("/signup")
+	public String index(Model m) {
+		log.info(" >>>>> HOME 접근 완료 >>>>> {}");
+		m.addAttribute("msg_home", 1);
+		return "/member/signup";
+	}
+}

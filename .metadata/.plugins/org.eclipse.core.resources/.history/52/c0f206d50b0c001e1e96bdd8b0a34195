@@ -1,0 +1,23 @@
+package com.study.www.contorller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.study.www.service.MemberService;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@RequestMapping("/mem/*")
+@Controller
+public class MemberContorller {
+	
+	private MemberService msv;
+	
+	public String index(Model m) {
+//		log.info(" >>>>> HOME 접근 완료 >>>>> {}");
+		m.addAttribute("msg_home", 1);
+		return "/member/signup";
+	}
+}

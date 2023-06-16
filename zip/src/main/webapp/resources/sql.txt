@@ -1,0 +1,27 @@
+--2023-06-16
+create table member(
+id varchar(255) not null primary key,
+pw varchar(255) not null,
+name varchar(255) not null,
+birth date not null,
+age int not null,
+email varchar(255),
+addr varchar(255),
+reg_date datetime default now()
+);
+create table board(
+bno int not null auto_increment primary key,
+title varchar(255) not null,
+content text not null,
+writer varchar(255) not null,
+reg_date datetime default now(),
+read_cnt int,
+isdel varchar(255) default 'N'
+);
+create table comment(
+cno int not null auto_increment primary key,
+bno int not null,
+writer varchar(255) not null,
+content text,
+reg_date datetime default now()
+);

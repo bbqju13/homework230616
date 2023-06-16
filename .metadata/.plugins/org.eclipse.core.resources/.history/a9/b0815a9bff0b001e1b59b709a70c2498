@@ -1,0 +1,22 @@
+package com.study.www.domain;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Setter
+@Getter
+public class MemberVO {
+	/*id varchar(255) not null primary key,
+pw varchar(255) not null,
+name varchar(255) not null,
+birth date not null,
+age int not null,
+email varchar(255),
+addr varchar(255),
+reg_date datetime default now()
+	 * */
+}

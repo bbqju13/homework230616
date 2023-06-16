@@ -1,0 +1,19 @@
+package com.study.www.contorller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@RequestMapping("/mem/*")
+@Controller
+public class MemberContorller {
+	
+	private MemberService msv;
+	
+	public String index(Model m) {
+		
+	}
+}
